@@ -16,7 +16,7 @@ def print_all_players():
     #Making a for loop
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-   
+    db.close()
 
 
 def print_all_players_by_last_name():
@@ -27,7 +27,7 @@ def print_all_players_by_last_name():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
 
 
 def print_all_players_by_first_name():
@@ -38,7 +38,7 @@ def print_all_players_by_first_name():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
  
 
 def print_all_players_by_jersey_number():
@@ -49,7 +49,7 @@ def print_all_players_by_jersey_number():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
 
 
 def print_all_players_by_ppg():
@@ -60,7 +60,7 @@ def print_all_players_by_ppg():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
 
 def print_all_players_by_total_points():
     sql = "SELECT * FROM team ORDER BY total_points DESC"
@@ -70,7 +70,7 @@ def print_all_players_by_total_points():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")       
-
+    db.close()
 
 def print_all_players_by_season_high():
     sql = "SELECT * FROM team ORDER BY season_high DESC"
@@ -80,7 +80,7 @@ def print_all_players_by_season_high():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
 
 def print_all_players_by_fouls():
     sql = "SELECT * FROM team ORDER BY fouls DESC"
@@ -90,7 +90,7 @@ def print_all_players_by_fouls():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
-
+    db.close()
 
 def print_all_players_by_games_played():
     sql = "SELECT * FROM team ORDER BY games_played DESC"
@@ -100,8 +100,24 @@ def print_all_players_by_games_played():
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
     for player in results:
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
+    db.close()
 
-        
 #Main code
-print_all_players_by_games_played()
-db.close()
+while True:
+    user_input = input(
+    '''
+    What would you like to do.
+    1. Print all player stats
+    2. Print all player stats sorted by last name
+    3. Print all player stats sorted by first name
+    4. Print all player stats sorted by jersey number
+    5. Print all player stats sorted by points per game
+    6. Print all player stats sorted by total points
+    7. Print all player stats sorted by season high
+    8. Print all player stats sorted by total fouls
+    9. Print all player stats sorted by games played
+    10. Exit
+    ''')
+    if user_input == "1":
+        print_all_players
+        break
