@@ -117,7 +117,24 @@ while True:
     8. Print all player stats sorted by total fouls
     9. Print all player stats sorted by games played
     10. Exit
-    ''')
+        ''')
     if user_input == "1":
-        print_all_players
+        print_all_players()
+    elif user_input == "2":
+        print_all_players_by_last_name()
+    elif user_input == "3":
+        print_all_players_by_first_name()
+    elif user_input == "4":
+        print_all_players_by_jersey_number()
+    elif user_input == "5":
+        print_all_players_by_ppg()
+    elif user_input == "6":
+        print_all_players_by_total_points()
+    elif user_input == "7":
+        print_all_players_by_season_high()
+    elif user_input == "8":
+        print_all_players_by_fouls()
+    elif user_input == "9":
+        print_all_players_by_games_played()        
+    elif user_input == "10":
         break
