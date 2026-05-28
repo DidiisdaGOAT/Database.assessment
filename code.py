@@ -1,7 +1,7 @@
 import sqlite3
 
-DATABASE = "Baskatball_stats"
-db = sqlite3.connect("Basketball_stats")
+DATABASE = "Baskatball_stats.db"
+db = sqlite3.connect(DATABASE)
 cursor = db.cursor()
 
 
