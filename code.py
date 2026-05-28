@@ -101,8 +101,10 @@ def print_all_players_by_games_played():
         print(f"{player[1]:<24}{player[2]:<14}#{player[3]:<14}{player[4]:<8}{player[5]:<6}{player[6]:<6}{player[7]:<6}{player[8]}")
 
 #Main code
-#While loop
+#A little introduction
 print("Welcome to my basketball stats database.\nIn here you would be able to view all stats and order them however you want.")
+
+#While loop
 while True:
     user_input = input(
     '''
@@ -118,7 +120,7 @@ while True:
     9. Print all player stats sorted by games played
     10. Exit
         ''')
-    #If statements to see what option th euser wants
+    #If statements to see what option the user wants
     if user_input == "1":
         print_all_players()
     elif user_input == "2":
@@ -140,6 +142,6 @@ while True:
     elif user_input == "10":
         break
     else:
-        print("That wasnot an option. Please enter a number ")
+        print("That was not an option. Please enter a valid number ")
 #Closig the database off        
 db.close()    
