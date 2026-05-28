@@ -1,6 +1,6 @@
 import sqlite3
 
-DATABASE = "Baskatball_stats.db"
+DATABASE = "Basketball_stats.db"
 db = sqlite3.connect(DATABASE)
 cursor = db.cursor()
 
@@ -9,7 +9,7 @@ cursor = db.cursor()
 #Defining the functions
  
 def print_all_players():
-    sql = "SELECT * FROM team"
+    sql = "SELECT * FROM team;"
     cursor.execute(sql)
     results = cursor.fetchall()
     print("Last Name               First Name    Jersey Number  PPG    Total  High  Fouls Games Played")
@@ -20,7 +20,7 @@ def print_all_players():
 
 
 def print_all_players_by_last_name():
-    sql = "SELECT * FROM team ORDER BY last_name"
+    sql = "SELECT * FROM team ORDER BY last_name;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -30,7 +30,7 @@ def print_all_players_by_last_name():
   
 
 def print_all_players_by_first_name():
-    sql = "SELECT * FROM team ORDER BY first_name"
+    sql = "SELECT * FROM team ORDER BY first_name;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -41,7 +41,7 @@ def print_all_players_by_first_name():
  
 
 def print_all_players_by_jersey_number():
-    sql = "SELECT * FROM team ORDER BY jersey_number"
+    sql = "SELECT * FROM team ORDER BY jersey_number;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -52,7 +52,7 @@ def print_all_players_by_jersey_number():
 
 
 def print_all_players_by_ppg():
-    sql = "SELECT * FROM team ORDER BY ppg DESC"
+    sql = "SELECT * FROM team ORDER BY ppg DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -62,7 +62,7 @@ def print_all_players_by_ppg():
 
 
 def print_all_players_by_total_points():
-    sql = "SELECT * FROM team ORDER BY total_points DESC"
+    sql = "SELECT * FROM team ORDER BY total_points DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -72,7 +72,7 @@ def print_all_players_by_total_points():
    
 
 def print_all_players_by_season_high():
-    sql = "SELECT * FROM team ORDER BY season_high DESC"
+    sql = "SELECT * FROM team ORDER BY season_high DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -82,7 +82,7 @@ def print_all_players_by_season_high():
 
 
 def print_all_players_by_fouls():
-    sql = "SELECT * FROM team ORDER BY fouls DESC"
+    sql = "SELECT * FROM team ORDER BY fouls DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
@@ -92,7 +92,7 @@ def print_all_players_by_fouls():
    
 
 def print_all_players_by_games_played():
-    sql = "SELECT * FROM team ORDER BY games_played DESC"
+    sql = "SELECT * FROM team ORDER BY games_played DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #Making a for loop
